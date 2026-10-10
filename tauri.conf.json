@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Mini Diarium",
+  "version": "0.7.4",
+  "identifier": "com.minidiarium",
+  "build": {
+    "beforeDevCommand": "bun run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "bun run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [],
+    "security": {
+      "csp": "default-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost; worker-src 'none'; child-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; manifest-src 'none'",
+      "dangerousDisableAssetCspModification": ["style-src"]
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["dmg", "app", "msi", "nsis", "appimage", "deb"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "copyright": "Copyright (c) 2026 Francisco J. Revoredo",
+    "category": "Utility",
+    "shortDescription": "An encrypted, local-first desktop journaling app",
+    "longDescription": "Mini Diarium is a privacy-focused desktop journaling application. All diary entries are encrypted with AES-256-GCM at rest. Features include rich text editing, full-text search, calendar navigation, import/export, and automatic backups. No network access, no telemetry. Your journal stays on your device.",
+    "resources": ["../fonts/*.ttf"],
+    "licenseFile": "../LICENSE",
+    "macOS": {
+      "minimumSystemVersion": "10.15",
+      "signingIdentity": "-"
+    },
+    "windows": {
+      "nsis": {
+        "installMode": "perMachine"
+      }
+    },
+    "linux": {
+      "deb": {
+        "depends": [
+          "libwebkit2gtk-4.1-0",
+          "libappindicator3-1"
+        ],
+        "recommends": [
+          "hunspell-en-us"
+        ]
+      },
+      "rpm": {
+        "recommends": [
+          "hunspell-en-US"
+        ]
+      }
+    }
+  }
+}
